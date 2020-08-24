@@ -26,6 +26,6 @@ function init(){
 function main() {
     console.log("main:start")
     init();
-    draw1();
+    img.onload = draw1();
     console.log("main:end")
 }
