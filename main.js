@@ -1,6 +1,4 @@
 var site = "https://ikasamd.github.io/html5/";
-var img = new Image();    //画像オブジェクト作成
-img.src = site + "img/316x384.png";  //写真のパスを指定する
 
 function draw1() {
     var ctx = document.getElementById("canvas").getContext("2d");
@@ -26,6 +24,12 @@ function init(){
 function main() {
     console.log("main:start")
     init();
-    img.onload = draw1();
+    var img = new Image();    //画像オブジェクト作成
+    image.onload = function(){
+        console.log("load complete");
+        draw1();
+    }
+    img.src = site + "img/316x384.png";  //写真のパスを指定する
+    
     console.log("main:end")
 }
