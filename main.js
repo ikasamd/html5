@@ -1,4 +1,5 @@
 var site = "https://ikasamd.github.io/html5/";
+var img = new Image();    //画像オブジェクト作成
 
 function draw1() {
     var ctx = document.getElementById("canvas").getContext("2d");
@@ -24,7 +25,6 @@ function init(){
 function main() {
     console.log("main:start")
     init();
-    var img = new Image();    //画像オブジェクト作成
     img.onload = function(){
         console.log("load complete");
         draw1();
