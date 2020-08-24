@@ -25,7 +25,7 @@ function main() {
     console.log("main:start")
     init();
     var img = new Image();    //画像オブジェクト作成
-    image.onload = function(){
+    img.onload = function(){
         console.log("load complete");
         draw1();
     }
