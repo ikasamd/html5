@@ -1,0 +1,20 @@
+#game {
+    position: relative;
+    border: 2px solid black;
+}
+
+canvas {
+    position: absolute;
+}
+
+#face {
+    z-index: 3;
+}
+
+#main {
+    z-index: 2;
+}
+
+#back {
+    z-index: 1;
+}

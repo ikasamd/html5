@@ -1,35 +1,36 @@
 var site = "https://ikasamd.github.io/html5/";
-var img = new Image();    //画像オブジェクト作成
+var img = new Image(); //画像オブジェクト作成
 
 function draw1() {
-    var ctx = document.getElementById("canvas").getContext("2d");
+    var ctx = document.getElementById("main").getContext("2d");
     ctx.drawImage(img, 0, 0);
 }
 
-function init(){
+function init() {
     if (window.GamepadEvent) {
         // ゲームパッドを接続すると実行されるイベント
-        window.addEventListener("gamepadconnected", function (e) {
+        window.addEventListener("gamepadconnected", function(e) {
             console.log("ゲームパッドが接続された");
             console.log(e.gamepad);
         });
         // ゲームパッドの接続を解除すると実行されるイベント
-        window.addEventListener("gamepaddisconnected", function (e) {
+        window.addEventListener("gamepaddisconnected", function(e) {
             console.log("ゲームパッドの接続が解除された");
             console.log(e.gamepad);
         });
-    }else{
+    } else {
         console.log("GamepadEvent未対応");
     }
 }
+
 function main() {
     console.log("main:start")
     init();
-    img.onload = function(){
+    img.onload = function() {
         console.log("load complete");
         draw1();
     }
-    img.src = site + "img/316x384.png";  //写真のパスを指定する
-    
+    img.src = site + "img/316x384.png"; //写真のパスを指定する
+
     console.log("main:end")
 }
